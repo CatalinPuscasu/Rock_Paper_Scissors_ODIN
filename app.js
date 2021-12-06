@@ -1,7 +1,13 @@
 // ---------------GAME START--------------------------
 
-function playRound (playerSelection, computerSelection) {
-       console.log("Welcome the the Rock, Paper, Scissors Game! All you have to do is guess the best choiche, in order to win. PLease write your choice:  ");
+function playRound () {
+  
+    // --------------------------------------
+    let playerSelection = prompt("Welcome the the Rock, Paper, Scissors Game! All you have to do is guess the best choice, in order to win. PLease write your choice:");
+    if (playerSelection !== null) {
+        console.log("You chose : " + playerSelection);
+    }
+    
 }
 
 playRound();
