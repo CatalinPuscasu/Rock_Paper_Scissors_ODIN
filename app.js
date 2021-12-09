@@ -1,16 +1,5 @@
 // ---------------GAME START--------------------------
 
-function playRound () {
-  
-    // --------------------------------------
-    let playerSelection = prompt("Welcome the the Rock, Paper, Scissors Game! All you have to do is guess the best choice, in order to win. PLease write your choice:");
-    if (playerSelection !== null) {
-        console.log("You chose : " + playerSelection);
-    }
-    
-}
-
-playRound();
 
 
 
@@ -18,12 +7,50 @@ playRound();
 
 //  game engine
 
-function computerPlay () {
+ function computerPlay () {
     let words = ["Scissors", "Rock", "Paper"];
     const algorithm = words[Math.floor(Math.random()* words.length)];
-    console.log(algorithm);
+    return(algorithm);
 }
 
-computerPlay();
 
-// ---------------------------------------------------------------------------------------------
+let random = computerPlay();
+
+console.log(random);
+
+
+
+function playRound (playerSelection) {
+    
+    if (playerSelection === "Rock" && random === "Rock" ) {
+        console.log("It's a tie");
+    }
+    else if (playerSelection === "Rock" && random === "Paper") {
+        console.log("You lost! Paper beats rock");
+    }
+    else if (playerSelection === "Rock" && random === "Scissors") {
+        console.log("You lost! Scissors beats rock");
+    }
+    else if (playerSelection === "Paper" && random === "Scissors") {
+        console.log("You lost! Scissors beats paper");
+    }
+    else if (playerSelection === "Paper" && random === "Rock") {
+        console.log("You won! Paper beats rock");
+    }
+    else if (playerSelection === "Paper" && random === "Paper") {
+        console.log("It's a tie!");
+    }
+    else if (playerSelection === "Scissors" && random === "Paper") {
+        console.log("You won! Scissors beats paper!");
+    }
+    else if (playerSelection === "Scissors" && random === "Rock") {
+        console.log("You lost! Rock beats Scissors");
+    }
+    else if (playerSelection === "Scissors" && random === "Scissors") {
+        console.log("It's a tie!");
+    }
+
+}
+
+
+let result = playRound("Scissors");
