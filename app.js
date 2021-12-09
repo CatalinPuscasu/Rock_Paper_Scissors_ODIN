@@ -57,7 +57,6 @@ console.log(random);
 
 function game() {
     let playerInput = prompt("Choose between Rock, Paper or Scissors");
-  
     
 
 
@@ -98,6 +97,10 @@ let result = playRound("Scissors");
 
 }
 
+game();
+game();
+game();
+game();
 game();
 
    
