@@ -16,51 +16,25 @@
 
 let random = computerPlay();
 
+// console.log(random);
+
+function Input () {
+   let userInput = prompt("Please choose between Rock, Paper or Scissors");
+     if (userInput !== null) {
+         return userInput;
+     }
+}
+
+let playerInput = Input();
+
+console.log(playerInput);
 console.log(random);
 
 
 
-// function playRound (playerSelection) {
+function playRound (playerSelection, computerPlay) {
+
     
-//     if (playerSelection === "Rock" && random === "Rock" ) {
-//         console.log("It's a tie");
-//     }
-//     else if (playerSelection === "Rock" && random === "Paper") {
-//         console.log("You lost! Paper beats rock");
-//     }
-//     else if (playerSelection === "Rock" && random === "Scissors") {
-//         console.log("You lost! Scissors beats rock");
-//     }
-//     else if (playerSelection === "Paper" && random === "Scissors") {
-//         console.log("You lost! Scissors beats paper");
-//     }
-//     else if (playerSelection === "Paper" && random === "Rock") {
-//         console.log("You won! Paper beats rock");
-//     }
-//     else if (playerSelection === "Paper" && random === "Paper") {
-//         console.log("It's a tie!");
-//     }
-//     else if (playerSelection === "Scissors" && random === "Paper") {
-//         console.log("You won! Scissors beats paper!");
-//     }
-//     else if (playerSelection === "Scissors" && random === "Rock") {
-//         console.log("You lost! Rock beats Scissors");
-//     }
-//     else if (playerSelection === "Scissors" && random === "Scissors") {
-//         console.log("It's a tie!");
-//     }
-
-// }
-
-
-// let result = playRound("Scissors");
-
-function game() {
-    let playerInput = prompt("Choose between Rock, Paper or Scissors");
-    
-
-
-    function playRound (playerSelection) {
     
     if (playerInput === "Rock" && random === "Rock" ) {
         console.log("It's a tie");
@@ -92,19 +66,19 @@ function game() {
 
 }
 
+const playerSelection = playerInput;
 
-let result = playRound("Scissors");
+const computerSelection = random;
 
-}
 
-game();
-game();
-game();
-game();
-game();
+console.log(playRound(playerSelection, computerSelection));
 
-   
 
+
+
+
+  
+  
 
 
 
