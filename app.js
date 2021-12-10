@@ -72,6 +72,51 @@ const computerSelection = random;
 
 
 console.log(playRound(playerSelection, computerSelection));
+//   Game function
+
+function game(playerSelection, computerPlay) {
+    // this function will include all the game
+
+    function playRound (playerSelection, computerPlay) {
+
+    
+    
+    if (playerInput === "Rock" && random === "Rock" ) {
+        console.log("It's a tie");
+    }
+    else if (playerInput === "Rock" && random === "Paper") {
+        console.log("You lost! Paper beats rock");
+    }
+    else if (playerInput === "Rock" && random === "Scissors") {
+        console.log("You lost! Scissors beats rock");
+    }
+    else if (playerInput === "Paper" && random === "Scissors") {
+        console.log("You lost! Scissors beats paper");
+    }
+    else if (playerInput === "Paper" && random === "Rock") {
+        console.log("You won! Paper beats rock");
+    }
+    else if (playerInput === "Paper" && random === "Paper") {
+        console.log("It's a tie!");
+    }
+    else if (playerInput === "Scissors" && random === "Paper") {
+        console.log("You won! Scissors beats paper!");
+    }
+    else if (playerInput === "Scissors" && random === "Rock") {
+        console.log("You lost! Rock beats Scissors");
+    }
+    else if (playerInput === "Scissors" && random === "Scissors") {
+        console.log("It's a tie!");
+    }
+    console.log(playRound(playerSelection, computerSelection));
+  }
+
+}
+
+console.log(game(playerSelection, computerSelection));
+console.log("To play another round, reload the page with the F5 key!");
+
+
 
 
 
