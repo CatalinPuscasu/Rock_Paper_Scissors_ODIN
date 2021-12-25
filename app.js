@@ -97,6 +97,8 @@ const PlayerChoice = btns.forEach(function (button) {
      document.querySelector('p').textContent = 'You chose :' + "   " + button.textContent;
      console.log(button.textContent);
 
+    ComputerChoice();
+
     })
 });
 
