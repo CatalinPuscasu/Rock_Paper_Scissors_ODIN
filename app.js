@@ -117,6 +117,20 @@
 // console.log("To play another round, reload the page with the F5 key!");
 
 
+const btns = document.querySelectorAll('button');
+
+let Rock = document.querySelector('.Rock');
+let Paper = document.querySelector('.Paper');
+let Scissors = document.querySelector('.Scissors');
+
+
+btns.forEach(function (button) {
+    button.addEventListener('click', () => {
+        document.querySelector('p').textContent = 'You chose :' + "   " + button.textContent;
+    })
+});
+
+
 
 
 
