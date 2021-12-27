@@ -97,10 +97,13 @@ const PlayerChoice = btns.forEach(function (button) {
      document.querySelector('p').textContent = 'You chose :' + "   " + button.textContent;
      console.log(button.textContent);
 
-    ComputerChoice();
+     ComputerChoice().textContent;
+     console.log(ComputerChoice());
 
     })
 });
+
+
 
 //  game engine
 
@@ -114,21 +117,28 @@ const ComputerChoice =  function computerPlay () {
 }
 
 
-
 ComputerChoice();
 
+//----------------comparison of results -------------------------------------
 
-function playRound (playerSelection, computerPlay) {
+
+// if (PlayerChoice === Rock && ComputerChoice === textContent("Scissors")) {
+//     console.log('Rock beats Scissors');
+// }
+
+
+
+function playRound () {
 
     
     
-    if (PlayerChoice === "Rock" && random === "Rock" ) {
+    if (PlayerChoice === "Rock" && ComputerChoice === "Rock" ) {
         console.log("It's a tie");
     }
-    else if (PlayerChoice === "Rock" && random === "Paper") {
+    else if (PlayerChoice === "Rock" && ComputerChoice === "Paper") {
         console.log("You lost! Paper beats rock");
     }
-    else if (PlayerChoice === "Rock" && random === "Scissors") {
+    else if (PlayerChoice === "Rock" && ComputerChoice === "Scissors") {
         console.log("You lost! Scissors beats rock");
     }
     else if (PlayerChoice === "Paper" && random === "Scissors") {
@@ -152,7 +162,8 @@ function playRound (playerSelection, computerPlay) {
 
 }
 
-const playerSelection = PlayerChoice;
+playRound();
+// const playerSelection = PlayerChoice;
 
 // const computerSelection = random;
 
