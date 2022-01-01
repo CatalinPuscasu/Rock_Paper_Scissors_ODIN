@@ -91,15 +91,20 @@ let Rock = document.querySelector('.Rock');
 let Paper = document.querySelector('.Paper');
 let Scissors = document.querySelector('.Scissors');
 
+let computerResult = document.querySelector('.computer');
 
 btns.forEach(function (button) {
     button.addEventListener('click', () => {
      document.querySelector('p').textContent = 'You chose :' + "   " + button.textContent;
-     console.log(button.textContent);
+     // console.log(button.textContent);
 
      ComputerChoice().textContent;
-     console.log(ComputerChoice());
+     // console.log(ComputerChoice());
 
+   // show computer result
+       
+    computerResult.style.color = 'black';
+      
 
     //  return btns.value
 
@@ -131,6 +136,8 @@ btns.forEach(function (button) {
     else if (button.textContent === "Scissors" && ComputerChoice() === "Rock") {
          document.querySelector('.result').textContent = 'You lost! Rock beats Scissors';
     }
+     event.stopPropagation();
+   
     })
 });
 
