@@ -104,6 +104,8 @@ btns.forEach(function (button) {
    // show computer result
        
     computerResult.style.color = 'black';
+
+     event.stopPropagation();
       
 
     //  return btns.value
@@ -136,7 +138,7 @@ btns.forEach(function (button) {
     else if (button.textContent === "Scissors" && ComputerChoice() === "Rock") {
          document.querySelector('.result').textContent = 'You lost! Rock beats Scissors';
     }
-     event.stopPropagation();
+    
    
     })
 });
