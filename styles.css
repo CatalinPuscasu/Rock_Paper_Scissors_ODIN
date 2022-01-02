@@ -9,8 +9,14 @@ body {
   flex-direction: column;
   gap: 34px;
   align-items: center;
+  background-color: royalblue;
 }
 
 .computer-div {
   color: white;
 }
+
+/* .paper-img {
+  width: 225px;
+  height: 255px;
+} */
