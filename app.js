@@ -139,9 +139,11 @@ btns.forEach(function (button) {
     else if (button.textContent === "Scissors" && ComputerChoice() === "Rock") {
          document.querySelector('.result').textContent = 'You lost! Rock beats Scissors';
     }
+
    
     })
 });
+
 
 
 
